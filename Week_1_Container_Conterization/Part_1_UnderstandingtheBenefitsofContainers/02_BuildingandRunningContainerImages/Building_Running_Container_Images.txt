@@ -1,0 +1,21 @@
+Welcome to “Building and Running Containers.” After watching this video, you will be able
+to: Build a container image using a Dockerfile. Create a running container using an image. And describe key Docker commands. This diagram shows the development process
+of a running container. The steps to create and run containers are: Create a Dockerfile. Use the Dockerfile to create a container image. And use the container image to create a running
+container. Use a Dockerfile to create a running container. This sample Dockerfile has the commands FROM
+and CMD. FROM defines the base image. And CMD prints the words ”Hello World!” on the terminal. You’ll notice that this Docker command uses
+the build command, the tag, the repository, the version, and the current directory. After you run this build command, the output
+messages include: Sending build context to Docker daemon “Successfully built &lt;image id&gt;”, which
+confirms image creation and “Successfully tagged my-app:v1”, which
+confirms the tag. To verify the creation of the image, run the
+“docker images” command. The output displays the repository (my-app), as well as the tag (v1), image ID, creation date, and the image size. Create the container using the run command
+with the container image name and tag. The application prints the words “Hello,
+world!!” Execute the docker ps -a command, which displays
+the details of the container created. Given the appropriate input, the build command is used to create container
+images with tags from a Dockerfile. The images command will list all the images,
+their repositories and tags, and their sizes. The run command creates and runs a container
+from an image. The push command stores images in a configured
+registry and The pull command retrieves images from a configured
+registry. In this video, you learned that: The build command is used with a Dockerfile
+to build a container image, the run command is used with an image to create
+a running container, and key Dockerfile commands include build,
+images, run, pull, and push.

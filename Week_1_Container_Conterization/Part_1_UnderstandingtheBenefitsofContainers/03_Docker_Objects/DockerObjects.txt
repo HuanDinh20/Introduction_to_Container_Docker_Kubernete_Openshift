@@ -1,0 +1,40 @@
+Welcome to “Introduction to Docker Objects.” After watching this video, you will be able
+to identify and describe Docker objects, identify essential Dockerfile commands, explain container image naming format, and describe how Docker uses networks, storage,
+and plugins. Docker contains objects such as the
+Dockerfile, images, container, network, storage volumes, and other objects, such as plugins and add-ons. A Dockerfile is a text file that contains
+instructions needed to create an image. You can create a Dockerfile using any editor
+from the console or terminal. Let’s go over several of the essential instructions
+that Docker provides. A Dockerfile must always begin with a FROM
+instruction that defines a base image. Often the base image is from a public repository,
+like an operating system or a specific language like Go or Node.js. The RUN instruction executes commands. The CMD instruction defines a default command
+for execution. A Dockerfile should have only one CMD instruction. If the Dockerfile has several CMD instructions,
+only the last CMD instruction will take effect. Next, let’s learn about Docker images. A Docker Image is a read-only template with
+instructions for creating a Docker container. The Dockerfile provides instructions to build
+the image. Each Docker instruction creates a new layer
+in the image. When you change the Dockerfile and rebuild
+the image, the Docker engine only rebuilds the changed layers. Images can share these layers, which saves
+a lot of disk space as well as network bandwidth when sending and receiving images. When you instantiate this image, you get a
+running container. At this point, a writeable container layer
+is placed on top of the read-only layers. The writeable layer is needed because containers
+are not immutable as images. Now let’s learn how images are named. An image name has a unique format that consists
+of three parts: the hostname, the repository, and the tag. The hostname identifies the image registry. A repository is a group of related container
+images. The tag provides information about a specific
+version or variant of an image. Consider the image name docker.io/ubuntu:18.04. The hostname docker.io refers to the Docker
+Hub registry. When using the Docker CLI, you can exclude
+the docker.io hostname. The repository name ubuntu indicates an Ubuntu
+image. Finally, the tag, shown here as 18.04, represents
+the installed Ubuntu version. Now, let’s learn about Docker containers. What is a Docker container? A Docker container is a runnable instance
+of an image. You can use the Docker API or CLI to create,
+start, stop, or delete an image. You can connect to multiple networks, attach
+storage to the container, or create a new image based on its current state. Docker keeps containers well isolated from
+each other and their host machine. When using Docker, networks help isolate container
+communications. By default, data doesn’t persist when the
+container no longer exists. Docker uses volumes and bind mounts to persist
+data even after a container stops. Plugins, such as storage plugins, provide
+the ability to connect to external storage platforms. In this video, you learned that docker contains objects such as the Dockerfiles,
+images, containers, networks, storage volumes, and other objects, such as plugins and add-ons. Essential Docker instructions include FROM,
+RUN, and CMD. A docker container is a runnable instance
+of an image. An image name format consists of three identifiers: the hostname, the repository, and the tag. Docker uses networks to isolate container
+communications. Docker uses volumes and binds mounts to persist
+data even after a container stops running. And, Plugins, such as storage plugins, provide
+the ability to connect to external storage platforms.

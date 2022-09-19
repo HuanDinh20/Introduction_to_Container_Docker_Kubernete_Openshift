@@ -1,0 +1,36 @@
+Hello, and welcome to “Docker Architecture.” After watching this video, you will be able to identify the components of the Docker architecture, explain the features of the Docker
+architecture components, and describe the process of
+containerization using Docker. The Docker client-server architecture
+provides a complete application environment. Docker components include the
+client, the host, and the registry. Let’s take a high-level view of how Docker works. First, you’ll use either the Docker command
+line interface or REST APIs via the Docker client to send instructions to the Docker
+host server, commonly called the host. The Docker host contains the
+daemon, known as dockerd. The daemon listens for Docker
+API requests or commands such as “docker run” and processes those commands. The daemon does the heavy lifting to build,
+run, and distribute Docker containers. Then, Docker stores the
+container images in a registry. The Docker host also includes and manages: Images Containers Namespaces Networks Storage Plugins and add-ons. You can use the Docker ​ client to communicate with local ​ and remote Docker hosts. You can run the Docker client
+and daemon on the same system or​ connect your Docker client
+to a remote Docker daemon.​ And Docker daemons can also communicate with
+other daemons to manage Docker services. Docker stores and distributes
+images in a registry. Registry access is either public, such as Docker
+Hub, which is accessible by everyone, or private. Enterprises usually opt to use a
+private registry for security reasons. And registry locations are hosted using
+a third-party provider, such as IBM Cloud Container Registry, or self-hosted in
+private data centers or on the cloud. Next, let’s learn about moving
+images into the registry. First, developers build and push the images using automation or a build
+pipeline into a registry, where Docker stores these images. Then, local machines, cloud systems, and
+on-premises systems can pull those images. Let’s examine the process in more detail. Here is a visual representation of the
+Docker architecture, which consists of the client; the Docker host, including the Docker daemon; and the
+registry with its existing stored images. Let’s check out the containerization process. Here’s how you use Docker
+to create a container image: First, use an existing base image or a Dockerfile. Then, issue the build command that
+creates a container image with a name. Next, issue the push command to
+store the image to the registry. The host first checks locally if
+the image is already available and then issues the run command with
+the image name to create the container. If the image is unavailable within the host, the Docker client connects to the
+registry and pulls the image to the host. The daemon then creates a running
+container using the image. In this video, you learned that: Docker architecture consists of a Docker
+client, a Docker host, and a registry. The client interacts with the
+host using commands and REST APIs. The Docker host includes the
+daemon, commonly called dockerd. The Docker host also manages
+images, containers, namespaces, networks, storage, plugins, and add-ons, and containerization is the process used to build, push, and run an image to
+create a running container.
